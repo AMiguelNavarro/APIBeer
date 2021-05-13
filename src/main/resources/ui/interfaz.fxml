@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.web.WebView?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="758.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="802.0" prefWidth="1499.0">
+         <children>
+            <Text layoutX="22.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Listado de todas las cervezas" />
+            <Button fx:id="btBuscar" layoutX="726.0" layoutY="83.0" mnemonicParsing="false" onMouseClicked="#buscar" prefHeight="25.0" prefWidth="72.0" text="Buscar" />
+            <TableView fx:id="tvAllBeers" layoutX="22.0" layoutY="52.0" onMouseClicked="#seleccionarCervezaListadoGeneral" prefHeight="332.0" prefWidth="424.0" />
+            <ListView fx:id="lvBeersFecha" layoutX="489.0" layoutY="119.0" onMouseClicked="#seleccionarCervezaListadoFecha" prefHeight="264.0" prefWidth="309.0" />
+            <Text layoutX="489.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de fabricación a partir de:" />
+            <TextField fx:id="tfFechaFabricacion" layoutX="489.0" layoutY="52.0" prefHeight="25.0" prefWidth="221.0" />
+            <ComboBox fx:id="cbFechaFabricacion" layoutX="489.0" layoutY="83.0" prefHeight="25.0" prefWidth="221.0" />
+            <Separator layoutX="841.0" layoutY="20.0" orientation="VERTICAL" prefHeight="360.0" prefWidth="0.0" />
+            <Text layoutX="1021.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DETALLE" />
+            <Text layoutX="912.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" textAlignment="RIGHT" wrappingWidth="108.404296875" />
+            <Text layoutX="912.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Eslogan" textAlignment="RIGHT" wrappingWidth="108.404296875" />
+            <Text layoutX="912.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha de fabricación" textAlignment="RIGHT" />
+            <WebView fx:id="wvImagen" layoutX="928.0" layoutY="228.0" prefHeight="200.0" prefWidth="232.0" />
+            <Text fx:id="tvFechaFabricacion" layoutX="1044.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="________________" />
+            <Text fx:id="tvEslogan" layoutX="1044.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="________________" />
+            <Text fx:id="tvNombre" layoutX="1044.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="________________" />
+            <TextArea fx:id="taDescripcion" layoutX="22.0" layoutY="424.0" prefHeight="302.0" prefWidth="252.0" />
+            <Text layoutX="22.0" layoutY="416.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Descripción:" wrappingWidth="108.404296875" />
+            <ListView fx:id="lvFiltroNombre" layoutX="304.0" layoutY="462.0" onMouseClicked="#seleccionarBeerFiltroNombre" prefHeight="264.0" prefWidth="392.0" />
+            <Text layoutX="304.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Que el nombre contenga:" />
+            <TextField fx:id="tfFiltroNombre" layoutX="446.0" layoutY="424.0" />
+            <Button fx:id="btFiltroNombre" layoutX="606.0" layoutY="424.0" mnemonicParsing="false" onAction="#filtrarNombre" prefHeight="25.0" prefWidth="88.0" text="Buscar" />
+            <Text layoutX="973.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Volumen" textAlignment="RIGHT" />
+            <Text fx:id="tvValue" layoutX="1044.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="___" wrappingWidth="26.6875" />
+            <Text fx:id="tvUnit" layoutX="1084.0" layoutY="185.0" strokeType="OUTSIDE" strokeWidth="0.0" text="___" wrappingWidth="26.6875" />
+            <Button fx:id="btCSV" layoutX="928.0" layoutY="493.0" mnemonicParsing="false" onAction="#exportarCSV" prefHeight="25.0" prefWidth="221.0" text="Exportar CSV" />
+            <Button fx:id="btZIP" layoutX="928.0" layoutY="529.0" mnemonicParsing="false" onAction="#exportarZIP" prefHeight="25.0" prefWidth="221.0" text="Exportar ZIP" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
